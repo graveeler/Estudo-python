@@ -1,0 +1,116 @@
+COLUMNS = {
+    'SALES_FORCE': {
+        'nome'         : 'DS_NOME',
+        'telefone'     : 'NR_TELEFONE',
+        'localidade'   : 'NM_LOCALIDADE',
+        'cidade'       : 'NM_CIDADE',
+        'lp_origem'    : 'NM_LP_ORIGEM',
+        'aceite'       : 'FG_ACEITE',
+        'data_cadastro': 'DH_CADASTRO',
+        'email'        : 'DS_EMAIL',
+        'cpf'          : 'NM_CPF',
+        'cnpj'         : 'NM_CNPJ',
+        'nome_empresa' : 'NM_EMPRESA',
+        'pergunta'     : 'DS_PERGUNTA',
+        'uf'           : 'DS_UF',
+        'pergunta1'    : 'DS_PERGUNTA1',
+        'pergunta2'    : 'DS_PERGUNTA2',
+        'lgpd'         : 'FG_LGPD',
+        'regional'     : 'DS_REGIONAL',
+        'pergunta3'    : 'DS_PERGUNTA3',
+        'pergunta4'    : 'DS_PERGUNTA4',
+        'pergunta5'    : 'DS_PERGUNTA5',
+        'pergunta6'    : 'DS_PERGUNTA6',
+        'termo'        : 'FG_TERMO',
+        'aceite_imagem': 'FG_ACEITE_IMAGEM'
+    },
+
+    'SALES_FORCE_FACE': {
+        'cpf'                            : 'NM_CPF',
+        'date collected'                 : 'DH_COLETA',
+        'email'                          : 'DS_EMAIL',
+        'facebook ad id'                 : 'CD_FACE_AD',
+        'facebook ad name'               : 'NM_FACE_AD',
+        'facebook ad set id'             : 'CD_FACE_AD_SET',
+        'facebook ad set name'           : 'NM_FACE_AD_SET',
+        'facebook campaign id'           : 'CD_FACE_CAMPANHA',
+        'facebook campaign name'         : 'NM_FACE_CAMPANHA',
+        'facebook page id'               : 'CD_FACE_PAGE',
+        'facebook platform'              : 'NM_FACE_PLATAFORMA',
+        'full_name'                      : 'DS_NOME',
+        'lead gen form id'               : 'CD_LEAD_FORM',
+        'phone_number'                   : 'NR_TELEFONE',
+        'qual___o_seu_perfil_'           : 'DS_PERFIL',
+        'voc__possui_alguma_defici_ncia_': 'DS_POSSUI_DEFICIENCIA',
+        'lead_payload_invalid'           : 'DS_INVALIDO_LEAD_PAYLOAD',
+        'declaro_que_li_e_estou_ciente_que_os_meus_dados_pessoais_ser_o_tratados_e_compartilhados_com_os_parceiros__conforme_as_diretr---': 'FG_TERMO_DADOS',        
+        'estou_ciente_e_concordo_que_minha_imagem_poder__ser_registrada_e_utilizada_durante_e_ou_ap_s_o_evento__para_divulga__o_nos_me---': 'FG_TERMO_IMAGEM'        
+    },
+
+    'SALES_FORCE_FACE_V2': {
+        'aceiteimagem'          : 'FG_ACEITA_IMAGEM',
+        'aceiteprivacidade'     : 'FG_ACEITA_PRIVACIDADE',
+        'cpf__brazil_'          : 'NR_CPF',
+        'date collected'        : 'DH_COLETA',
+        'defici_ncia'           : 'DS_DEFICIENCIA',
+        'email'                 : 'DS_EMAIL',
+        'facebook ad id'        : 'CD_FACE_AD',
+        'facebook ad name'      : 'NM_FACE_AD',
+        'facebook ad set id'    : 'CD_FACE_AD_SET',
+        'facebook ad set name'  : 'NM_FACE_AD_SET',
+        'facebook campaign id'  : 'CD_FACE_CAMPANHA',
+        'facebook campaign name': 'NM_FACE_CAMPANHA',
+        'facebook page id'      : 'CD_FACE_PAGE',
+        'facebook platform'     : 'NM_FACE_PLATAFORMA',
+        'lead gen form id'      : 'CD_LEAD_FORM',
+        'nome_completo'         : 'DS_NOME_COMPLETO',
+        'qual___o_seu_perfil_'  : 'DS_PERFIL',
+        'telefone'              : 'NR_TELEFONE',
+        'lead_payload_invalid'  : 'DS_INVALIDO_LEAD_PAYLOAD'
+    }
+}
+
+REORDER_COLUMNS = {
+    'SALES_FORCE_FACE': [
+        'NM_CPF',
+        'DH_COLETA',
+        'DS_EMAIL',
+        'CD_FACE_AD',
+        'NM_FACE_AD',
+        'CD_FACE_AD_SET',
+        'NM_FACE_AD_SET',
+        'CD_FACE_CAMPANHA',
+        'NM_FACE_CAMPANHA',
+        'CD_FACE_PAGE',
+        'NM_FACE_PLATAFORMA',
+        'DS_NOME',
+        'CD_LEAD_FORM',
+        'NR_TELEFONE',
+        'DS_PERFIL',
+        'DS_POSSUI_DEFICIENCIA',
+        'DS_INVALIDO_LEAD_PAYLOAD',
+        'FG_TERMO_DADOS',        
+        'FG_TERMO_IMAGEM'],
+    
+    'LOG':[
+        'NM_ROTINA',
+        'NM_TABELA',
+        'NM_ORIGEM',
+        'DH_INICIO_EXECUCAO',
+        'DH_FIM_EXECUCAO',
+        'DS_TEMPO_EXTRACAO',
+        'QT_TEMPO_EXTRACAO_SEG',
+        'QT_LINHAS_ORIGEM',
+        'DS_TEMPO_TRANSFORMACAO',
+        'QT_TEMPO_TRANSFORMACAO_SEG',
+        'QT_LINHAS_PYTHON',
+        'DS_TEMPO_LOAD',
+        'QT_TEMPO_LOAD_SEG',
+        'DS_TEMPO_TOTAL',
+        'QT_TEMPO_TOTAL_SEG',
+        'QT_ERROS']
+}
+
+BACKUP_SCHEMA = {
+    'SALES_FORCE_FACE_V2': 'CREATE TABLE BI_STG.TEMP_RD_SCL_SALES_FORCE_FACE_V\r\n(\r\n    FG_ACEITA_IMAGEM VARCHAR2(10),\r\n    FG_ACEITA_PRIVACIDADE VARCHAR2(10),\r\n    NR_CPF VARCHAR2(100),\r\n    DH_COLETA VARCHAR2(100),\r\n    DS_DEFICIENCIA VARCHAR2(300),\r\n    DS_EMAIL VARCHAR2(100),\r\n    CD_FACE_AD VARCHAR2(100),\r\n    NM_FACE_AD VARCHAR2(100),\r\n    CD_FACE_AD_SET VARCHAR2(100),\r\n    NM_FACE_AD_SET VARCHAR2(100),\r\n     CD_FACE_CAMPANHA VARCHAR2(100),\r\n    NM_FACE_CAMPANHA VARCHAR2(100),\r\n    CD_FACE_PAGE VARCHAR2(100),\r\n    NM_FACE_PLATAFORMA VARCHAR2(100),\r\n    CD_LEAD_FORM VARCHAR2(100),\r\n    DS_NOME_COMPLETO VARCHAR2(300),\r\n    DS_PERFIL VARCHAR2(100),\r\n    NR_TELEFONE VARCHAR2(100),\r\n    DS_INVALIDO_LEAD_PAYLOAD VARCHAR2(100)\r\n);\r\n\r\ngrant select on BI_STG.TEMP_RD_SCL_SALES_FORCE_FACE_V to BI_DW_DEV;\r\ngrant select on BI_STG.TEMP_RD_SCL_SALES_FORCE_FACE_V to CONEXAO;'
+}
